@@ -50,9 +50,7 @@ div ul li {
     color: #000;
 }
 
-.right ul li {
-    list-style-type: none;
-    color: #000;
+.right ul li, audio {
     margin-top: 0.5em;
 }
 
@@ -67,4 +65,16 @@ h5 {
 .left p {
     text-align: left;
     margin-left: 0.5em;
+}
+
+audio {
+    margin-top: 0.5em;
+    width: 200px;
+}
+
+.songName {
+    display: block;
+    font-size: 12px;
+    margin-left: 60px;
+    margin-top: 0.5em;
 }
