@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Relational Grouping Structure Drawing/Coding Activity</title>
+    <link rel="stylesheet" href="./../src/css/rsm.css">
+</head>
+<body>
+    <h1>Relational Grouping Structure Drawing/Coding Activity by Dor Rondel</h1>
+    <hr/>
+    <main>
+        <div class="a1">
+            <u><h2>Are You Sleeping?</h2></u>
+            <br/> 
+            <div class="indented">
+                <h3>JFugue Notation</h3>
+                <br/>
+                <p>The following test represents the <strong>Are You Sleeping?</strong> melody
+                   in <strong>JFugue</strong> notation. Note that this text simply presents 
+                   the surface level of the melody it represents.
+                </p>
+                <br/>
+                <p>
+                    <strong>
+                        C5q D5q E5q C5q C5q D5q E5q C5q E5q F5q G5h E5q F5q G5h G5i A5i
+                        G5i F5i E5q C5q G5i A5i G5i F5i E5q C5q C5q G4q C5h C5q G4h C5h
+                    </strong>
+                </p> 
+                <br>
+                <h3>Sound File</h3>
+                <br/>
+                <audio controls>
+                    <source src="../../assets/audio/m1.mp3" type="audio/mp3" />
+                </audio>
+                <br/>
+                <h3>RSM Diagram</h3>
+                <img src="./../assets/img/m1.png" alt="are you sleeping RSM diagram">
+                <ul class="groups">
+                    <li>G_1: C5q D5q E5q C5q</li>
+                    <li>G_2: C5q D5q E5q C5q</li>
+                    <li>G_3: E5q F5q G5h</li>
+                    <li>G_4: E5q F5q G5h</li>
+                    <li>G_5: G5i​ A5i G5i F5i E5q C5q</li>
+                    <li>G_6: G5i A5i G5i F5i E5q C5q</li>
+                    <li>G_7: C5q G4h C5h</li>
+                    <li>G_8: C5q G4h C5h</li>
+                </ul>
+                <br/>
+                <h3>Corresponding Clay Code</h3>
+                <pre>
+                    G1 >> PLAY RP PLAY RP PLAY 2LP PLAY
+                    G2 >> G1
+                    G3 >> 2RP PLAY RP PLAY RP PLAY 4LP
+                    G4 >> G3
+                    G5 >> 4RP PLAY RP PLAY LP PLAY LP PLAY LP PLAY 2LP PLAY
+                    G6 >> G5
+                    G7 >> PLAY 4RP PLAY 4LP PLAY
+                    G8 >> G7
+                    M1 >> G1 G2 G3 G4 G5 G6 G7 G8
+                </pre>
+                <br/>
+            </div>
+        </div>
+        <div class="a2">
+                <u><h2>German Folk Song</h2></u>
+                <br/> 
+                <div class="indented">
+                    <h3>JFugue Notation</h3>
+                    <br/>
+                    <p>The following test represents the <strong>German Folk Song</strong> melody
+                       in <strong>JFugue</strong> notation. Note that this text simply presents 
+                       the surface level of the melody it represents.
+                    </p>
+                    <br/>
+                    <p>
+                        <strong>
+                            C5q E5q G5h G5i F5i E5i D5i C5h D5i D5i B4i G4i G5i G5i E5i C5i D5i
+                            D5i B4i G4i G5i G5i E5i C5i C5i D5i E5i F5i G5h G5i F5i E5i D5i C5h
+                        </strong>
+                    </p> 
+                    <br>
+                    <h3>Sound File</h3>
+                    <br/>
+                    <audio controls>
+                        <source src="../../assets/audio/m2.mp3" type="audio/mp3" />
+                    </audio>
+                    <br/>
+                    <h3>RSM Diagram</h3>
+                    <img src="./../assets/img/m2.png" alt="german folk song RSM diagram">
+                    <ul class="groups">
+                        <li>G_1: C5q E5q G5h</li>
+                        <li>G_2: G5i F5i E5i D5i C5h</li>
+                        <li>G_3: D5i D5i B4i G4i</li>
+                        <li>G_4: G5i G5i E5i C5i</li>
+                        <li>G_5: D5i D5i B4i G4i</li>
+                        <li>G_6: G5i G5i E5i C5i</li>
+                        <li>G_7: C5i D5i E5i F5i G5h</li>
+                        <li>G_8: G5i F5i E5i D5i C5h</li>
+                    </ul>
+                    <br/>
+                    <h3>Corresponding Clay Code</h3>
+                    <pre>
+                        G1 >> PLAY 2RP PLAY 2RP PLAY 4RP
+                        G2 >> 4RP PLAY LP PLAY LP PLAY LP PLAY LP PLAY
+                        G3 >> RP 2PLAY 2LP PLAY 2LP PLAY 4LP
+                        G4 >> 4RP 2PLAY 2LP PLAY 2LP PLAY
+                        G5 >> G3
+                        G6 >> G4
+                        G7 >> PLAY RP PLAY RP PLAY RP PLAY RP PLAY
+                        G8 >> 4LP G2
+                        M2 >> G1 G2 G3 G4 G5 G6 G7 G8
+                    </pre>
+                    <br/>
+                </div>
+            </div>
+    </main>   
+</body>
+</html>
