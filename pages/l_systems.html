@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Relational Grouping Structure Drawing/Coding Activity</title>
+    <link rel="stylesheet" href="./../src/css/rsm.css">
+</head>
+<body>
+    <h1>L-System Composition Assignment by Dor Rondel</h1>
+    <hr/>
+    <main>
+        <div class="a1">
+            <u><h2>Retro RPG</h2></u>
+            <br/> 
+            <div class="indented">
+                <h3>Description</h3>
+                <p> The tune is composed using the fourth generation of the Algae L-System predefined into Clay.
+                    The melody is formed of two parts: the first, which emphasizes the Dorian
+                    scale, as well as the second, which emphasizes the E-minor scale.
+                    The two halfs are similar in structure and have relationships between their subgroupings.
+                </p>
+                <br/>
+                <p style="width: 30vw;">
+                    <strong>
+                            / D1 / E1 E1 \ D1 D1 / G1 G1 \ D1 / G1 \ D1 D1 / G1 \ E1 \ D1 D1 / E1 
+                            \ D1 / E1 E1 \ D1 / E1 \ A1 A1 / E1 E1 \ D1 D1 / E1 \ A1 / E1 E1 \ A1 
+                            / D1 / E1 E1 \ D1 / E1 \ A1 A1 / E1 \ D1 / E1 E1 \ D1 D1 / G1 G1 \ D1 
+                            / G1 \ D1 D1 / G1 \ E1 \ D1 D1 / E1 \ D1 / E1 E1 \ D1 D1 / E1 E1 \ D1 
+                            D1 / G1 G1 \ D1 / G1 \ D1 D1 / G1 \ E1 \ D1 D1 / E1 \ D1 / E1 E1 \ D1 
+                            / E1 \ A1 A1 / E1 E1 \ D1 D1 / E1 \ A1 / E1 E1 \ A1 / D1 / E1 E1 \ D1 
+                            / E1 \ A1 A1 / E1 \ D1 / E1 E1 \ D1 D1 / G1 G1 \ D1 / G1 \ D1 D1 / G1 
+                            \ E1 \ D1 D1 / E1 \ D1 / E1 E1 \ D1 / E1 \ A1 A1 / E1 E1 \ D1 D1 / E1 
+                            \ A1 / E1 E1 \ A1 / D1 / E1 E1 \ D1 / E1 \ A1 A1 / E1 \ D1 / E1 E1 \ D1
+                            D1 / G1 G1 \ D1 / G1 \ D1 D1 / G1 \ E1 \ D1 D1 / E1 \ D1 / E1 E1 \ D1 
+                    </strong>
+                </p> 
+                <br>
+                <h3>Sound File</h3>
+                <br/>
+                <audio controls>
+                    <source src="../../assets/audio/half1.mp3" type="audio/mp3" />
+                </audio>
+                <br/>
+                <h3>Corresponding Clay Code</h3>
+                <pre>
+                    D1 >> RP PLAY RP 2PLAY LP PLAY LP
+                    D2 >> RP PLAY 3RP 2PLAY 3LP PLAY LP
+                    D3 >> 4RP PLAY 3LP 2PLAY 3RP PLAY 4LP
+                    D4 >> 2RP PLAY LP 2PLAY RP PLAY 2LP
+                    D5 >> D1
+
+                    E1 >> 2RP PLAY 4LP 2PLAY 4RP PLAY 2LP
+                    E2 >> 2RP PLAY LP 2PLAY RP PLAY 2LP
+                    E3 >> 2LP PLAY 4RP 2PLAY 4LP PLAY 2RP
+                    E4 >> RP PLAY RP 2PLAY LP PLAY LP
+                    E5 >> E1
+
+                    FIRST >> D1 D2 D3 D4 D5
+                    SECND >> E1 E2 E3 E4 E5
+                    HALF1 >> FIRST SECND FIRST FIRST SECND FIRST SECND FIRST
+                </pre>
+                <br/>
+            </div>
+        </div>
+        <div class="a2">
+                <u><h2>Stalling </h2></u>
+            <br/> 
+            <div class="indented">
+                <h3>Description</h3>
+                <p> The tune is composed using the third generation of the Cantordust L-System predefined into Clay.
+                    The melody is formed of two parts: the first, which emphasizes the A-minor
+                    scale, as well as the second, which emphasizes the C-major scale.
+                    The two halfs are similar in structure and have relationships between their subgroupings.
+                </p>
+                <br/>
+                <p style="width: 30vw;">
+                    <strong>
+                            / D1 / E1 E1 \ D1 D1 / G1 G1 \ D1 / G1 \ D1 D1 / G1 \ E1 \ D1 D1 / E1 
+                            \ D1 / E1 E1 \ D1 / E1 \ A1 A1 / E1 E1 \ D1 D1 / E1 \ A1 / E1 E1 \ A1 
+                            / D1 / E1 E1 \ D1 / E1 \ A1 A1 / E1 \ D1 / E1 E1 \ D1 D1 / G1 G1 \ D1 
+                            / G1 \ D1 D1 / G1 \ E1 \ D1 D1 / E1 \ D1 / E1 E1 \ D1 D1 / E1 E1 \ D1 
+                            D1 / G1 G1 \ D1 / G1 \ D1 D1 / G1 \ E1 \ D1 D1 / E1 \ D1 / E1 E1 \ D1 
+                            / E1 \ A1 A1 / E1 E1 \ D1 D1 / E1 \ A1 / E1 E1 \ A1 / D1 / E1 E1 \ D1 
+                            / E1 \ A1 A1 / E1 \ D1 / E1 E1 \ D1 D1 / G1 G1 \ D1 / G1 \ D1 D1 / G1 
+                            \ E1 \ D1 D1 / E1 \ D1 / E1 E1 \ D1 / E1 \ A1 A1 / E1 E1 \ D1 D1 / E1 
+                            \ A1 / E1 E1 \ A1 / D1 / E1 E1 \ D1 / E1 \ A1 A1 / E1 \ D1 / E1 E1 \ D1
+                            D1 / G1 G1 \ D1 / G1 \ D1 D1 / G1 \ E1 \ D1 D1 / E1 \ D1 / E1 E1 \ D1 
+                    </strong>
+                </p> 
+                <br>
+                <h3>Sound File</h3>
+                <br/>
+                <audio controls>
+                    <source src="../../assets/audio/half2.mp3" type="audio/mp3" />
+                </audio>
+                <br/>
+                <h3>Corresponding Clay Code</h3>
+                <pre>
+                    C1 >> PLAY 4RP 2PLAY 4LP PLAY
+                    C2 >> PLAY 2RP 2PLAY 2LP PLAY
+                    C3 >> 4RP PLAY 4LP 2PLAY 4RP PLAY 4LP
+                    C4 >> 2RP PLAY 2LP 2PLAY 2RP PLAY 2LP
+                    C5 >> C1
+                    A1 >> 2LP PLAY 2RP 2PLAY 2LP PLAY 2RP
+                    A2 >> 2LP PLAY 4RP 2PLAY 4LP PLAY 2RP
+                    A3 >> PLAY 2LP 2PLAY 2RP PLAY
+                    A4 >> 2RP PLAY 4LP 2PLAY 4RP PLAY 2LP
+                    A5 >> A1
+
+                    THRD >> C1 C2 C3 C4 C5
+                    FRTH >> A1 A2 A3 A4 A5
+                    HALF2 >> THRD FRTH THRD FRTH FRTH FRTH 
+                             THRD FRTH THRD FRTH FRTH FRTH 
+                             FRTH FRTH FRTH FRTH FRTH FRTH 
+                             THRD FRTH THRD FRTH FRTH FRTH 
+                             THRD FRTH THRD
+                </pre>
+                <br/>
+            </div>
+        </div>
+    </main>   
+</body>
+</html>
