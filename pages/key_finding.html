@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MxM Key Finding Assignment</title>
+    <link rel="stylesheet" href="./../src/css/rsm.css">
+</head>
+<body>
+    <h1>MxM Key Finding Assignment by Dor Rondel</h1>
+    <hr/>
+    <main>
+        <div class="a1">
+            <u><h2>Melody 1</h2></u>
+            <br/> 
+            <div class="indented">
+                <h3>Corresponding Clay Code based off C-note as the key:</h3>
+                <pre>
+                    MEL1 >> P1 P2 P3 P4 P5
+                    P1 >> LP PLAY RP S2 PLAY RP 2X2 PLAY RP PLAY LP PLAY LP PLAY LP 
+                          PLAY LP PLAY LP PLAY 2RP S2 PLAY RP
+                    P2 >> S2 PLAY 2X2 RP PLAY RP PLAY LP PLAY 3RP 2PLAYXLP 2LP
+                          PLAY LP PLAY S2 PLAY LP
+                    P3 >> 2RP S2 PLAY 2X2 RP PLAYXRP LP PLAY LP PLAY S2 PLAY LP
+                    P4 >> 2RP S2 PLAY 2X2 RP PLAYXRP LP PLAY LP PLAY RP PLAY LP PLAY
+                          LP PLAY LP PLAY LP S2 PLAY 2RP
+                    P5 >> 2RP S2 PLAY 2X2 RP PLAYXRP LP PLAY LP PLAY LP PLAY LP PLAY 
+                          LP PLAY RP PLAY RP PLAY LP PLAY LP PLAY RP PLAY S2 RP
+                    PLAYXLP >> CHROMATIC LP PLAY RP POPALPHABET
+                    PLAYXRP >> CHROMATIC RP PLAY LP POPALPHABET
+                </pre>
+                <br/>
+                <h3>Musical Notation Output:</h3>
+                <p style="width: 30vw;"> 
+                    <strong>
+                        \ B1 / C1/2 / D2 / E2 \ D2 \ C2 \ B2 \ A2 \ G2 / B1 / C1/2 / D2 / E2 \ D2 
+                        / G2 \ X2 \ E2 \ D2 D1 / E1/2 / X2 \ E2 \ D2 D1 / E1/2 / X2 \ E2 \ D2 / E2 
+                        \ D2 \ C2 \ B2 \ A1 / E1/2 / X2 \ E2 \ D2 \ C2 \ B2 \ A2 / B2 / C2 \ B2 \ A2 / B2 
+                    </strong>
+                </p> 
+                <br>
+                <h3>24 Key -> Correlation Map:</h3>
+                <br/>
+                <p style="width: 30vw;"> 
+                    <pre>
+                        C major 0.309202(9)	C minor -0.184674(15)
+                        C# major -0.701132(24)	C# minor -0.095442(14)
+                        D major 0.690933(2)	D minor 0.316588(8)
+                        Eb major -0.562801(21)	Eb minor -0.335641(19)
+                        E major 0.33547(7)	E minor 0.579523(4)
+                        F major -0.074778(12)	F minor -0.561664(20)
+                        F# major -0.29964(18)	F# minor 0.162732(10)
+                        G major 0.602(3)	G minor -0.077842(13)
+                        Ab major -0.635488(22)	Ab minor -0.193555(16)
+                        A major 0.43956(5)	A minor 0.36008(6)
+                        Bb major -0.261926(17)	Bb minor -0.664431(23)
+                        B major 0.158(11)	B minor 0.694326(1)***                        
+                    </pre>
+                </p> 
+                <br/>
+                <h3>Top five candidate keys:</h3>
+                <ol>
+                    <li>B-minor</li>
+                    <li>D-major</li>
+                    <li>G-major</li>
+                    <li>E-minor</li>
+                    <li>A-major</li>
+                </ol>
+                <h3>Proper-key Clay Program</h3>
+                <br/>
+                <pre>
+                    MELODY1 >> B-MINOR$ PART1 PART2 PART3 PART4 PART5 
+                    PART1 >> PLAY RP S2 PLAYXLP 2X2 RP PLAY RP PLAY LP PLAY LP PLAYXLP LP PLAY LP PLAY
+                             LP PLAY 2RP S2 PLAY
+                    PART2 >> RP S2 PLAYXLP 2X2 RP PLAY RP PLAY LP PLAY 3RP PLAY LP PLAY LP PLAY LP
+                             PLAY S2 PLAY 2LP
+                    PART3 >> 3RP S2 PLAY 2X2 RP PLAY LP PLAY LP PLAY S2 PLAY 2LP
+                    PART4 >> 3RP S2 PLAY 2X2 RP PLAY LP PLAY LP PLAY RP PLAY LP PLAY LP PLAYXLP LP 
+                             PLAY LP S2 PLAY RP
+                    PART5 >> 3RP S2 PLAY 2X2 RP PLAY LP PLAY LP PLAY LP PLAYXLP LP PLAY LP PLAY RP
+                             PLAY RP PLAYXLP LP PLAY LP PLAY RP PLAY S2
+                    PLAYXLP >> CHROMATIC LP PLAY RP POPALPHABET
+                </pre>
+                <br/><h3>Musical Notation Output:</h3>
+                <p style="width: 30vw;"> 
+                    <strong>
+                        B1 / C1/2 / D2 / E2 \ D2 \ C2 \ B2 \ A2 \ G2 / B1 / C1/2 / D2 / E2 \ D2 / G2
+                        \ X2 \ E2 \ D2 D1 / E1/2 / X2 \ E2 \ D2 D1 / E1/2 / X2 \ E2 \ D2 / E2 \ D2 \ 
+                        C2 \ B2 \ A1 / E1/2 / X2 \ E2 \ D2 \ C2 \ B2 \ A2 / B2 / C2 \ B2 \ A2 / B2
+                    </strong>
+                </p> 
+            </div>
+        </div>
+        <div class="a1">
+            <u><h2>Melody 2</h2></u>
+            <br/> 
+            <div class="indented">
+                <h3>Corresponding Clay Code based off C-note as the key:</h3>
+                <pre>
+                    MEL2 >> P1 P2 P3 P4
+                    P1 >> 5RP 2PLAY S2 RP PLAYXLP LP PLAY LP PLAY LP PLAY RP X2 PLAY 3RP PLAY X2 PLAY S2 7LP
+                    P2 >> 5RP 2PLAY S2 RP PLAYXLP LP PLAY LP PLAY LP PLAY LP X2 PLAY 2RP PLAY 4LP X2 PLAY S2
+                    P3 >> 7RP 2PLAY S2 RP PLAY LP PLAY LP PLAYXLP LP PLAY 3RP X2 2PLAY X2 PLAY S2 8LP
+                    P4 >> 7RP PLAY 2LP PLAY 2RP S2 PLAY LP PLAYXLP LP PLAY LP PLAY LP X2 PLAY 2RP PLAY LP X2
+                          PLAY S2 4LP
+                    PLAYXLP >> CHROMATIC LP PLAY RP POPALPHABET
+                </pre>
+                <br/>
+                <h3>Musical Notation Output:</h3>
+                <p style="width: 30vw;"> 
+                    <strong>
+                        \ A1 A1 / Z1/2 \ A1/2 \ G1/2 \ F1/2 / G1 / C1 C2 \ A1 A1 / Z1/2 \ A1/2 \ G1/2 \ F1/2 
+                        \ E1 / G1 \ C2 / C1 C1 / D1/2 \ C1/2 \ Z1/2 \ A1/2 / D1 D1 D2 \ C1 \ A1 / C1/2 \ 
+                        Z1/2 \ A1/2 \ G1/2 \ F1 / A1 \ G2
+                    </strong>
+                </p> 
+                <br>
+                <h3>24 Key -> Correlation Map:</h3>
+                <br/>
+                <p style="width: 30vw;"> 
+                    <pre>
+                        C major 0.760687(1)***	C minor 0.414462(6)
+                        C# major -0.504438(20)	C# minor -0.373974(18)
+                        D major 0.307332(8)	D minor 0.446632(5)
+                        Eb major -0.036009(13)	Eb minor -0.603968(21)
+                        E major -0.381861(19)	E minor 0.154703(10)
+                        F major 0.621362(3)	F minor -0.01805(12)
+                        F# major -0.634133(22)	F# minor -0.120511(14)
+                        G major 0.510614(4)	G minor 0.401984(7)
+                        Ab major -0.216263(16)	Ab minor -0.654569(23)
+                        A major 0.120588(11)	A minor 0.74852(2)
+                        Bb major 0.17502(9)	Bb minor -0.239458(17)
+                        B major -0.722899(24)   B minor -0.155772(15)                   
+                    </pre>
+                </p> 
+                <br/>
+                
+                <h3>Top five candidate keys:</h3>
+                <ol>
+                    <li>C-major</li>
+                    <li>A-minor</li>
+                    <li>F-major</li>
+                    <li>G-major</li>
+                    <li>D-minor</li>
+                </ol>
+                <h3>Proper-key Clay Program</h3>
+                <br/>
+                <pre>
+                    MELODY2 >> C-MAJOR$ P1 P2 P3 P4
+                    P1 >> 5RP 2PLAY S2 RP PLAYXLP LP PLAY LP PLAY LP PLAY RP X2 PLAY 3RP PLAY X2 PLAY S2 7LP
+                    P2 >> 5RP 2PLAY S2 RP PLAYXLP LP PLAY LP PLAY LP PLAY LP X2 PLAY 2RP PLAY 4LP X2 PLAY S2
+                    P3 >> 7RP 2PLAY S2 RP PLAY LP PLAY LP PLAYXLP LP PLAY 3RP X2 2PLAY X2 PLAY S2 8LP
+                    P4 >> 7RP PLAY 2LP PLAY 2RP S2 PLAY LP PLAYXLP LP PLAY LP PLAY LP X2 PLAY 2RP PLAY LP X2
+                          PLAY S2 4LP
+                    PLAYXLP >> CHROMATIC LP PLAY RP POPALPHABET
+                </pre>
+                <br/><h3>Musical Notation Output:</h3>
+                <p style="width: 30vw;"> 
+                    <strong>
+                        \ A1 A1 / Z1/2 \ A1/2 \ G1/2 \ F1/2 / G1 / C1 C2 \ A1 A1 / Z1/2 \ A1/2 \ G1/2 \ F1/2 
+                        \ E1 / G1 \ C2 / C1 C1 / D1/2 \ C1/2 \ Z1/2 \ A1/2 / D1 D1 D2 \ C1 \ A1 / C1/2 \ 
+                        Z1/2 \ A1/2 \ G1/2 \ F1 / A1 \ G2
+                    </strong>
+                </p> 
+            </div>
+        </div>
+    </main>   
+</body>
+</html>
