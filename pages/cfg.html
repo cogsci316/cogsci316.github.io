@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MxM CFG</title>
+    <link rel="stylesheet" href="./../src/css/rsm.css">
+</head>
+<body>
+    <h1>MxM Context Free Grammar Assignment by Dor Rondel</h1>
+    <hr/>
+    <main>
+        <div class="a1">
+            <u><h2>Context Free Grammar</h2></u>
+            <br/> 
+            <div class="indented">
+                <h3>This is the context free grammar that was devised for the assignment</h3>
+                <pre>
+                    Terminals { PLAY, 2PLAY, RP, LP, 2RP, 2LP, 3RP, 3LP, 4RP, 4LP, 2X2, 2S2 }
+
+                    Nonterminals: { seq, fast, slow, cmaj, emin, dor }
+                    
+                    Starting symbol: seq
+                    
+                    Productions:
+
+                    seq >> slow fast
+                    seq >> slow fast slow fast
+                    seq >> slow slow fast fast 
+                    seq >> fast fast slow slow
+                    seq >> fast slow fast slow
+                    slow >> 2s2 cmaj 2x2
+                    slow >> 2s2 emin 2x2
+                    slow >> 2s2 dor 2x2
+                    fast >> 2x2 cmaj 2s2
+                    fast >> 2x2 emin 2s2
+                    fast >> 2x2 dor 2s2
+                    cmaj >> 2play 2rp play 2rp play 4lp
+                    emin >> 2rp 2play lp play 3lp play 2rp
+                    dor >>  2lp 2play 3rp play 2rp play 3lp
+                </pre>
+                <hr>
+                <h3><strong>Derivation 1: C-Major</strong></h3>
+                <pre>
+             seq >> slow fast slow fast
+                    2x2 cmaj 2s2 fast slow fast
+                    2x2 2play 2rp play 2rp play 4lp 2s2 fast slow fast
+                    2x2 2play 2rp play 2rp play 4lp 2s2 2s2 cmaj 2x2 slow fast
+                    2x2 2play 2rp play 2rp play 4lp 2s2 2s2 2play 2rp play 2rp play 4lp 2x2 slow fast
+                    2x2 2play 2rp play 2rp play 4lp 2s2 2s2 2play 2rp play 2rp play 4lp 2x2 2x2 cmaj 2s2 fast
+                    2x2 2play 2rp play 2rp play 4lp 2s2 2s2 2play 2rp play 2rp play 4lp 2x2 2x2 2play 2rp play 2rp play 4lp 2s2 fast
+                    2x2 2play 2rp play 2rp play 4lp 2s2 2s2 2play 2rp play 2rp play 4lp 2x2 2x2 2play 2rp play 2rp play 4lp 2s2 2s2 cmaj 2x2
+                    2x2 2play 2rp play 2rp play 4lp 2s2 2s2 2play 2rp play 2rp play 4lp 2x2 2x2 2play 2rp play 2rp play 4lp 2s2 2s2 2play 2rp play 2rp play 4lp 2x2
+                </pre>
+                <br/>
+                <h3>Musical Notation Output:</h3>
+                <p style="width: 30vw;"> 
+                    <strong>
+                            \ C4 C4 / E4 / G4 \ C1/4 C1/4 / E1/4 / G1/4 \ C4 C4 / E4 / G4 \ C1/4 C1/4 / E1/4 / G1/4 
+                    </strong>
+                </p> 
+                <br>
+                <h3>Sound File</h3> 
+                <audio controls>
+                        <source src="../../assets/audio/cfg1.mp3" type="audio/mp3" />
+                </audio>
+                <br><hr><br>
+                <h3><strong>Derivation 2: E-Minor</strong></h3>
+                <pre>
+             seq >> fast slow fast slow
+                    2s2 emin 2x2 fast slow fast
+                    2s2 2rp 2play lp play 3lp play 2rp 2x2 fast slow fast
+                    2s2 2rp 2play lp play 3lp play 2rp 2x2 2x2 2rp 2play lp play 3lp play 2rp 2s2 slow fast 
+                    2s2 2rp 2play lp play 3lp play 2rp 2x2 2x2 2rp 2play lp play 3lp play 2rp 2s2 2s2 emin 2x2 fast 
+                    2s2 2rp 2play lp play 3lp play 2rp 2x2 2x2 2rp 2play lp play 3lp play 2rp 2s2 2s2 2rp 2play lp play 3lp play 2rp 2x2 fast
+                    2s2 2rp 2play lp play 3lp play 2rp 2x2 2x2 2rp 2play lp play 3lp play 2rp 2s2 2s2 2rp 2play lp play 3lp play 2rp 2x2 2x2 emin 2s2
+                    2s2 2rp 2play lp play 3lp play 2rp 2x2 2x2 2rp 2play lp play 3lp play 2rp 2s2 2s2 2rp 2play lp play 3lp play 2rp 2x2 2x2 2rp 2play lp play 3lp play 2rp 2s2
+                </pre>
+                <br/>
+                <h3>Musical Notation Output:</h3>
+                <p style="width: 30vw;"> 
+                    <strong>
+                            \ E1/4 E1/4 \ D1/4 \ A1/4 / E4 E4 \ D4 \ A4 / E1/4 E1/4 \ D1/4 \ A1/4 / E4 E4 \ D4 \ A4 
+                    </strong>
+                </p> 
+                <br>
+                <h3>Sound File</h3> 
+                <audio controls>
+                        <source src="../../assets/audio/cfg2.mp3" type="audio/mp3" />
+                </audio>
+                <br><hr><br>
+                <h3><strong>Derivation 3: Dorian</strong></h3>
+                <pre>
+             seq >> slow slow fast fast 
+                    2x2 dor 2s2 fast slow slow 
+                    2x2 2lp 2play 3rp play 2rp play 3lp 2s2 fast slow slow
+                    2x2 2lp 2play 3rp play 2rp play 3lp 2s2  2x2 dor 2s2 slow slow
+                    2x2 2lp 2play 3rp play 2rp play 3lp 2s2  2x2 2lp 2play 3rp play 2rp play 3lp 2s2 slow slow
+                    2x2 2lp 2play 3rp play 2rp play 3lp 2s2  2x2 2lp 2play 3rp play 2rp play 3lp 2s2 2s2 dor 2x2 slow
+                    2x2 2lp 2play 3rp play 2rp play 3lp 2s2  2x2 2lp 2play 3rp play 2rp play 3lp 2s2 2s2 2lp 2play 3rp play 2rp play 3lp 2x2 slow
+                    2x2 2lp 2play 3rp play 2rp play 3lp 2s2  2x2 2lp 2play 3rp play 2rp play 3lp 2s2 2s2 2lp 2play 3rp play 2rp play 3lp 2x2 2s2 dor 2x2
+                    2x2 2lp 2play 3rp play 2rp play 3lp 2s2  2x2 2lp 2play 3rp play 2rp play 3lp 2s2 2s2 2lp 2play 3rp play 2rp play 3lp 2x2 2s2 2lp 2play 3rp play 2rp play 3l 2x2
+                </pre>
+                <br/>
+                <h3>Musical Notation Output:</h3>
+                <p style="width: 30vw;"> 
+                    <strong>
+                            A4 A4 / D4 / F4 \ A4 A4 / D4 / F4 \ A1/4 A1/4 / D1/4 / F1/4 \ A1/4 A1/4 / D1/4 / F1/4
+                    </strong>
+                </p> 
+                <br>
+                <h3>Sound File</h3> 
+                <audio controls>
+                        <source src="../../assets/audio/cfg3.mp3" type="audio/mp3" />
+                </audio>
+                <br><hr><br>
+                <h3><strong>Derivation 4: Short Mix</strong></h3>
+                <pre>
+             seq >> slow fast
+                    2x2 cmaj 2s2 slow
+                    2x2 2play 2rp play 2rp play 4lp 2s2 slow
+                    2x2 2play 2rp play 2rp play 4lp 2s2 2s2 dor 2x2
+                    2x2 2play 2rp play 2rp play 4lp 2s2 2s2 2lp 2play 3rp play 2rp play 3lp 2x2
+                </pre>
+                <br/>
+                <h3>Musical Notation Output:</h3>
+                <p style="width: 30vw;"> 
+                    <strong>
+                            \ F4 F4 / A4 / C4 \ D1/4 D1/4 / G1/4 / B1/4 
+                    </strong>
+                </p> 
+                <br>
+                <h3>Sound File</h3> 
+                <audio controls>
+                        <source src="../../assets/audio/cfg4.mp3" type="audio/mp3" />
+                </audio>
+            </div>
+        </div>
+        
+    </main>   
+</body>
+</html>
