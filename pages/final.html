@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Relational Grouping Structure Drawing/Coding Activity</title>
+    <link rel="stylesheet" href="./../src/css/rsm.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Final Composition Assignment by Dor Rondel</h1>
+    <hr/>
+    <main>
+        <div class="a1">
+            <u><h2>Part 1 - Simple Variations on a Theme</h2></u>
+            <br/> 
+            <div class="indented">
+                <h3>Composer's Notes</h3>
+                <p> 
+                    Musical composition tasks that are loosely defined such as this one, typically turn out to be
+                    creative type of assignments. By allowing for a lot of flexibility (such as choosing my own theme),
+                    the final results almost always turn out unique, and if enough thought was put into them, auditorily pleasing as well.
+                    Reading through the assignment prior to starting it, I noticed that it uses the C scale. Therefore, the only notes
+                    selected for the composition were <b>{C, E, G}</b>. Aside from that, it seemed as if the hat operator for 
+                    concurrent play would not work in SonicText mode. I found this after reading the terminal output, which read:
+                    <code>Exception in thread "Clay Thread" java.lang.ClassCastException: note.SonicTextNote cannot be cast to note. SonicNote"</code>. This prompted me to use Sonic mode, which allowed all the concurrently played compositons
+                    to be audible. Additionally, I tried playing with tempo for a bit, and it would seem that Clay cannot produce 
+                    sounds with a shorter duration than an eigth note.
+                </p>
+                <br/>
+                <h3>MxM Code</h3>
+                <pre style="width: 80%;">
+                    FINAL >> S2 2LINE X2
+                    FINALVARIATION >> LINE^UPOCTAVE
+                    LATELINE >> 3REST LINE
+                    LINE >> THEME VAR1 VAR2 VAR3 THEME
+                    LOWLATELINE >> 3LP LATELINE
+                    LOWLINE >> 3LP LINE
+                    ORGANUM >> LINE^LOWLINE
+                    OUTOFSYNCH >> LINE^LATELINE
+                    OUTOFSYNCHORGANUM >> LINE^LOWLATELINE
+                    THEME >> THM PLAY THM
+                    THM >> PLAY 2S2 2RP 2PLAY 2RP 2PLAY 2X2 4LP PLAY
+                    UPOCTAVE >> 2REST 7RP LINE 7LP
+                    VAR1 >> C-MINOR$ THEME
+                    VAR2 >> C-WHOLETONE$ THEME
+                    VAR3 >> C-DIM7TH$ THEME                        
+                </pre>
+                <br/>
+                <h4>Theme</h4>
+                <audio controls>
+                    <source src="../../assets/audio/final_theme.mp3" type="audio/mp3" />
+                </audio>
+                <p style="width: 35vw;">
+                    <strong>
+                        C1 / E1/4 E1/4 / G1/4 G1/4 \ C1 C1 C1 / E1/4 E1/4 / G1/4 G1/4 \ C1  
+                    </strong>
+                </p>                
+                <br/>
+                <br/>
+                <h4>Line</h4>
+                <audio controls>
+                    <source src="../../assets/audio/final_line.mp3" type="audio/mp3" />
+                </audio>
+                <p style="width: 35vw;">
+                    <strong>
+                            C1 / E1/4 E1/4 / G1/4 G1/4 \ C1 C1 C1 / E1/4 E1/4 / G1/4 G1/4 \ C1 
+                            C1 / W1/4 W1/4 / G1/4 G1/4 \ C1 C1 C1 / W1/4 W1/4 / G1/4 G1/4 \ C1 
+                            C1 / E1/4 E1/4 / Y1/4 Y1/4 \ C1 C1 C1 / E1/4 E1/4 / Y1/4 Y1/4 \ C1 
+                            C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 C1 C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 
+                            C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 C1 C1 / X1/4 X1/4 / C1/4 C1/4 \ C1
+                    </strong>
+                </p>                
+                <br/>
+                <br/>
+                <h4>Organum</h4>
+                <audio controls>
+                    <source src="../../assets/audio/final_organum.mp3" type="audio/mp3" />
+                </audio>
+                <div style="width: 35vw;">
+                    <strong>
+                            C1 / E1/4 E1/4 / G1/4 G1/4 \ C1 C1 C1 / E1/4 E1/4 / G1/4 G1/4 \ C1 
+                            C1 / W1/4 W1/4 / G1/4 G1/4 \ C1 C1 C1 / W1/4 W1/4 / G1/4 G1/4 \ C1 
+                            C1 / E1/4 E1/4 / Y1/4 Y1/4 \ C1 C1 C1 / E1/4 E1/4 / Y1/4 Y1/4 \ C1 
+                            C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 C1 C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 
+                            C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 C1 C1 / X1/4 X1/4 / C1/4 C1/4 \ C1
+                    </strong>
+                    <hr/>
+                    <strong>
+                            \ W1 / A1/4 A1/4 / W1/4 W1/4 \ W1 W1 W1 / A1/4 A1/4 / W1/4 W1/4 \ 
+                            W1 \ C1 / W1/4 W1/4 / G1/4 G1/4 \ C1 C1 C1 / W1/4 W1/4 / G1/4 G1/4 
+                            \ C1 C1 / E1/4 E1/4 / Y1/4 Y1/4 \ C1 C1 C1 / E1/4 E1/4 / Y1/4 Y1/4 
+                            \ C1 C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 C1 C1 / X1/4 X1/4 / C1/4 C1/4 
+                            \ C1 C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 C1 C1 / X1/4 X1/4 / C1/4 C1/4 
+                            \ C1 
+                    </strong>
+                </div>                
+                <br/>
+                <br/>
+                <h4>Out of Synch</h4>
+                <audio controls>
+                    <source src="../../assets/audio/final_out_of_synch.mp3" type="audio/mp3" />
+                </audio>
+                <div style="width: 35vw;">
+                    <strong>
+                            C1 / E1/4 E1/4 / G1/4 G1/4 \ C1 C1 C1 / E1/4 E1/4 / G1/4 G1/4 \ C1 
+                            C1 / W1/4 W1/4 / G1/4 G1/4 \ C1 C1 C1 / W1/4 W1/4 / G1/4 G1/4 \ C1 
+                            C1 / E1/4 E1/4 / Y1/4 Y1/4 \ C1 C1 C1 / E1/4 E1/4 / Y1/4 Y1/4 \ C1 
+                            C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 C1 C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 
+                            C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 C1 C1 / X1/4 X1/4 / C1/4 C1/4 \ C1
+                    </strong>
+                    <hr/>
+                    <strong>
+                            R1 R1 R1 C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 C1 C1 / X1/4 X1/4 / C1/4 
+                            C1/4 \ C1 C1 / W1/4 W1/4 / G1/4 G1/4 \ C1 C1 C1 / W1/4 W1/4 / G1/4 
+                            G1/4 \ C1 C1 / E1/4 E1/4 / Y1/4 Y1/4 \ C1 C1 C1 / E1/4 E1/4 / Y1/4 
+                            Y1/4 \ C1 C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 C1 C1 / X1/4 X1/4 / C1/4 
+                            C1/4 \ C1 C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 C1 C1 / X1/4 X1/4 / C1/4 
+                            C1/4 \ C1
+                    </strong>
+                </div>                
+                <br/>
+                <br/>
+                <h4>Out of Synch Organum</h4>
+                <audio controls>
+                    <source src="../../assets/audio/final_out_of_synch_organum.mp3" type="audio/mp3" />
+                </audio>
+                <div style="width: 35vw;">
+                    <strong>
+                            C1 / E1/4 E1/4 / G1/4 G1/4 \ C1 C1 C1 / E1/4 E1/4 / G1/4 G1/4 \ C1 
+                            C1 / W1/4 W1/4 / G1/4 G1/4 \ C1 C1 C1 / W1/4 W1/4 / G1/4 G1/4 \ C1 
+                            C1 / E1/4 E1/4 / Y1/4 Y1/4 \ C1 C1 C1 / E1/4 E1/4 / Y1/4 Y1/4 \ C1 
+                            C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 C1 C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 
+                            C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 C1 C1 / X1/4 X1/4 / C1/4 C1/4 \ C1
+                    </strong>
+                    <hr/>
+                    <strong>
+                            R1 R1 R1 \ W1 / A1/4 A1/4 / W1/4 W1/4 \ W1 W1 W1 / A1/4 A1/4 / W1/4 
+                            W1/4 \ W1 \ C1 / W1/4 W1/4 / G1/4 G1/4 \ C1 C1 C1 / W1/4 W1/4 / G1/4 
+                            G1/4 \ C1 C1 / E1/4 E1/4 / Y1/4 Y1/4 \ C1 C1 C1 / E1/4 E1/4 / Y1/4 
+                            Y1/4 \ C1 C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 C1 C1 / X1/4 X1/4 / C1/4 
+                            C1/4 \ C1 C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 C1 C1 / X1/4 X1/4 / C1/4 
+                            C1/4 \ C1 
+                    </strong>
+                </div>                
+                <br/>
+                <br/>
+                <h4>Final Variation</h4>
+                <audio controls>
+                    <source src="../../assets/audio/final_variation.mp3" type="audio/mp3" />
+                </audio>
+                <div style="width: 35vw;">
+                    <strong>
+                            C1 / E1/4 E1/4 / G1/4 G1/4 \ C1 C1 C1 / E1/4 E1/4 / G1/4 G1/4 \ C1 
+                            C1 / W1/4 W1/4 / G1/4 G1/4 \ C1 C1 C1 / W1/4 W1/4 / G1/4 G1/4 \ C1 
+                            C1 / E1/4 E1/4 / Y1/4 Y1/4 \ C1 C1 C1 / E1/4 E1/4 / Y1/4 Y1/4 \ C1 
+                            C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 C1 C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 
+                            C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 C1 C1 / X1/4 X1/4 / C1/4 C1/4 \ C1
+                    </strong>
+                    <hr/>
+                    <strong>
+                            R1 R1 // A1 / W1/4 W1/4 / A1/4 A1/4 \ A1 A1 A1 / W1/4 W1/4 / A1/4 
+                            A1/4 \ A1 \ C1 / W1/4 W1/4 / G1/4 G1/4 \ C1 C1 C1 / W1/4 W1/4 / 
+                            G1/4 G1/4 \ C1 C1 / E1/4 E1/4 / Y1/4 Y1/4 \ C1 C1 C1 / E1/4 E1/4 / 
+                            Y1/4 Y1/4 \ C1 C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 C1 C1 / X1/4 X1/4 / 
+                            C1/4 C1/4 \ C1 C1 / X1/4 X1/4 / C1/4 C1/4 \ C1 C1 C1 / X1/4 X1/4 / 
+                            C1/4 C1/4 \ C1 
+                    </strong>
+                </div>                
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+            </div>
+        </div>
+        <div class="a2">
+                <u><h2>Part 2 -  Structural Refinement Grammar Algorithmic Composition</h2></u>
+            <br/> 
+            <div class="indented">
+                <h3>Composer's Notes</h3>
+                <p> 
+                    Structural refinement grammars provide an additional layer of abstraction for the
+                    various processes of musical composition, sitting on top of L-systems and context
+                    free grammars. The hardest part of the task was devising a grammar that would be flexible
+                    enough to allow for high output diversity and musical quality. That being said,
+                    I stuck to the C-minor scale for this one, using only <b>{C, E, G}</b> notes. To increase
+                    unpredictablity and variability I included various different mappings and tempos within the grammar.
+                    The derivations weren't hard - just very tedious.
+                </p>
+                <br/>
+                <br/>
+                <h3>Grammar</h3>
+                <div style="width: 80%;">
+                    <pre>
+                        Terminals: {PLAY 2PLAY 2RP 2LP S2 X2}
+                        Nonterminals: {melody frag short mid long shortmid shortlong midshort midlong longshort longmid} 
+                        Substitutions: {short:play↑mid short:play↑long mid:play↑short mid:play↑long long:play↑short long:play↑mid} 
+                        Start symbol: melody 
+                    </pre>
+                    <ol>
+                        <li>melody → frag end</li>
+                        <li>melody → frag frag end</li>
+                        <li>melody → frag frag frag end</li>
+                        <li>melody → frag frag frag frag end</li>
+                        <li>frag → shortmid midshort </li>
+                        <li>frag → midshort longshort </li>
+                        <li>frag → longmid shortmid </li>
+                        <li>frag → midlong longmid </li>
+                        <li>frag → shortmid shortlong </li>
+                        <li>frag → midlong shortmid </li>
+                        <li>frag → longshort longmid </li>
+                        <li>short → play 2rp play 2rp play 4lp</li>
+                        <li>short → 2play 2rp play 2lp</li>
+                        <li>short → 2play 4rp play 4lp</li>
+                        <li>short → s2 play 2rp play 2rp play 4lp x2</li>
+                        <li>short → s2 2play 2rp play 2lp x2</li>
+                        <li>short → s2 2play 4rp play 4lp x2</li>
+                        <li>mid → 2play 4rp 2play 4lp</li>
+                        <li>mid → 2play 2rp play 2rp play 4lp</li>
+                        <li>mid → 2play 2rp 2play 2lp</li>
+                        <li>mid → s2 2play 4rp 2play 4lp x2</li>
+                        <li>mid → s2 2play 2rp 2play 2lp x2</li>
+                        <li>mid → s2 2play 2play x2</li>
+                        <li>long → 2play 2rp play 2rp 2play 4lp</li>
+                        <li>long → 2play 2rp 2play 2rp play 4lp</li>
+                        <li>long → play 2rp 2play 2rp 2play 4lp</li>
+                        <li>long → s2 2play 2rp play 2rp 2play 4lp x2</li>
+                        <li>long → s2 2play 2rp play 2rp 2play 4lp x2</li>
+                        <li>long → s2 2play 2rp play 2rp 2play 4lp x2</li>
+                        <li>shortmid → short:play↑mid</li>
+                        <li>shortlong → short:play↑long</li>
+                        <li>midshort → mid:play↑short</li>
+                        <li>midlong → mid:play↑long</li>
+                        <li>longshort → long:play↑short</li>
+                        <li>longmid → long:play↑mid</li>
+                        <li>end → play x2 play x2 play 2s2</li>
+                    </ol>        
+                </div>
+                <br/>
+                <br/>
+                <h3>First Derivation</h3>
+                <div style="width: 90vw">
+                    <pre>
+                        melody
+                        → frag frag end
+                        → longmid shortmid frag end (DD, 7)
+                        → long:play↑mid shortmid frag end (DD, 35)
+                        → [play 2rp 2play 2rp 2play 4lp]:play↑mid shortmid frag end (RD, 26)
+                        → s2 2play 4rp 2play 4lp x2 2rp 2play 2rp 2play 4lp shortmid frag end (MD, 21)
+                        → s2 2play 4rp 2play 4lp x2 2rp 2play 2rp 2play 4lp short:play↑mid frag end (DD, 30)
+                        → s2 2play 4rp 2play 4lp x2 2rp 2play 2rp 2play 4lp [2play 4rp play 4lp]:play↑mid frag end (RD, 18)
+                        → s2 2play 4rp 2play 4lp x2 2rp 2play 2rp 2play 4lp 2play 4rp play 4lp s2 2play 2play x2 frag end (MD, 23)
+                        → s2 2play 4rp 2play 4lp x2 2rp 2play 2rp 2play 4lp 2play 4rp play 4lp s2 2play 2play x2 
+                          shortmid midshort end (DD, 5)
+                        → s2 2play 4rp 2play 4lp x2 2rp 2play 2rp 2play 4lp 2play 4rp play 4lp s2 2play 2play x2 
+                          short:play↑mid midshort end (DD, 30)
+                        → s2 2play 4rp 2play 4lp x2 2rp 2play 2rp 2play 4lp 2play 4rp play 4lp s2 2play 2play x2 
+                          [s2 2play 2rp play 2lp x2]:play↑mid midshort end (RD, 16)
+                        → s2 2play 4rp 2play 4lp x2 2rp 2play 2rp 2play 4lp 2play 4rp play 4lp s2 2play 2play x2 
+                          s2 2play 2rp s2 2play 2rp 2play 2lp x2 2lp x2 midshort end (RD, 22)
+                        → s2 2play 4rp 2play 4lp x2 2rp 2play 2rp 2play 4lp 2play 4rp play 4lp s2 2play 2play x2 
+                          s2 2play 2rp s2 2play 2rp 2play 2lp x2 2lp x2 mid:play↑short end (DD, 32)
+                        → s2 2play 4rp 2play 4lp x2 2rp 2play 2rp 2play 4lp 2play 4rp play 4lp s2 2play 2play x2 
+                          s2 2play 2rp s2 2play 2rp 2play 2lp x2 2lp x2 [2play 2rp play 2rp play 4lp]:play↑short end (RD, 19)
+                        → s2 2play 4rp 2play 4lp x2 2rp 2play 2rp 2play 4lp 2play 4rp play 4lp s2 2play 2play x2 
+                          s2 2play 2rp s2 2play 2rp 2play 2lp x2 2lp x2 2play 2rp 2play 4rp play 4lp 2rp 2play 4rp play 4lp 
+                          4lp end (MD, 19)
+                        → s2 2play 4rp 2play 4lp x2 2rp 2play 2rp 2play 4lp 2play 4rp play 4lp s2 2play 2play x2 
+                          s2 2play 2rp s2 2play 2rp 2play 2lp x2 2lp x2 2play 2rp 2play 4rp play 4lp 2rp 2play 4rp play 4lp 
+                          4lp play x2 play x2 play 2s2 (DD, 36)
+                    </pre>
+                </div>
+                <br/><br/>
+                <h3>Sound File</h3>
+                <br/>
+                <audio controls>
+                    <source src="../../assets/audio/final_srg1.mp3" type="audio/mp3" />
+                </audio>
+                <h3>Musical Notes</h3>
+                <div style="width: 35vw;">
+                    <strong>
+                            C1/2 C1/2 / G1/2 G1/2 \ E1 E1 / G1 G1 \ C1 C1 / G1 \ C1/2 C1/2 C1/2 C1/2 
+                            C1/2 C1/2 / E1/4 E1/4 / G1/4 G1/4 \ C1 C1 / E1 E1 / B1 \ G1 G1 / D1 \\ 
+                            C1 C2 C4 
+                    </strong>
+                </div>
+                <br/><br/>
+                <h3>Second Derivation</h3>
+                <div style="width: 90vw;">
+                    <pre>
+                        melody
+                        → shortmid shortlong frag end (DD, 9)
+                        → short:play↑mid shortlong frag end (DD, 30)
+                        → [s2 2play 4rp play 4lp x2]:play↑mid shortlong frag end (RD, 17)
+                        → s2 2play 4rp s2 2play 2rp 2play 2lp x2 4lp x2 shortlong frag end (MD, 22)
+                        → s2 2play 4rp s2 2play 2rp 2play 2lp x2 4lp x2 short:play↑long frag end (DD, 31)
+                        → s2 2play 4rp s2 2play 2rp 2play 2lp x2 4lp x2 [s2 play 2rp play 2rp play 4lp x2]:play↑long frag end (RD, 15)
+                        → s2 2play 4rp s2 2play 2rp 2play 2lp x2 4lp x2 s2 s2 2play 2rp play 2rp 2play 4lp x2 2rp s2 2play 2rp play 2rp 
+                          2play 4lp x2 2rp s2 2play 2rp play 2rp 2play 4lp x2 4lp x2 frag end (MD, 29)
+                        → s2 2play 4rp s2 2play 2rp 2play 2lp x2 4lp x2 s2 s2 2play 2rp play 2rp 2play 4lp x2 2rp s2 2play 2rp play 2rp 
+                          2play 4lp x2 2rp s2 2play 2rp play 2rp 2play 4lp x2 4lp x2 shortmid midshort end (DD, 5)
+                        → s2 2play 4rp s2 2play 2rp 2play 2lp x2 4lp x2 s2 s2 2play 2rp play 2rp 2play 4lp x2 2rp s2 2play 2rp play 2rp 
+                          2play 4lp x2 2rp s2 2play 2rp play 2rp 2play 4lp x2 4lp x2 short:play↑mid midshort end (DD, 30)
+                        → s2 2play 4rp s2 2play 2rp 2play 2lp x2 4lp x2 s2 s2 2play 2rp play 2rp 2play 4lp x2 2rp s2 2play 2rp play 2rp 
+                          2play 4lp x2 2rp s2 2play 2rp play 2rp 2play 4lp x2 4lp x2 [2play 4rp play 4lp]:play↑mid midshort end (RD, 14)
+                        → s2 2play 4rp s2 2play 2rp 2play 2lp x2 4lp x2 s2 s2 2play 2rp play 2rp 2play 4lp x2 2rp s2 2play 2rp play 2rp 
+                          2play 4lp x2 2rp s2 2play 2rp play 2rp 2play 4lp x2 4lp x2 2play 4rp s2 2play 4rp 2play 4lp x2 4lp midshort end (MD, 21)
+                        → s2 2play 4rp s2 2play 2rp 2play 2lp x2 4lp x2 s2 s2 2play 2rp play 2rp 2play 4lp x2 2rp s2 2play 2rp play 2rp 
+                          2play 4lp x2 2rp s2 2play 2rp play 2rp 2play 4lp x2 4lp x2 2play 4rp s2 2play 4rp 2play 4lp x2 4lp
+                          mid:play↑short end (DD, 32)
+                        → s2 2play 4rp s2 2play 2rp 2play 2lp x2 4lp x2 s2 s2 2play 2rp play 2rp 2play 4lp x2 2rp s2 2play 2rp play 2rp 
+                          2play 4lp x2 2rp s2 2play 2rp play 2rp 2play 4lp x2 4lp x2 2play 4rp s2 2play 4rp 2play 4lp x2 4lp
+                          [2play 2rp play 2rp play 4lp]:play↑short end (RD, 18)
+                        → s2 2play 4rp s2 2play 2rp 2play 2lp x2 4lp x2 s2 s2 2play 2rp play 2rp 2play 4lp x2 2rp s2 2play 2rp play 2rp 
+                          2play 4lp x2 2rp s2 2play 2rp play 2rp 2play 4lp x2 4lp x2 2play 4rp s2 2play 4rp 2play 4lp x2 4lp
+                          2play 2rp 2play 2rp play 2lp 2rp 2play 2rp play 2lp 4lp end (MD, 13)
+                        → s2 2play 4rp s2 2play 2rp 2play 2lp x2 4lp x2 s2 s2 2play 2rp play 2rp 2play 4lp x2 2rp s2 2play 2rp play 2rp 
+                          2play 4lp x2 2rp s2 2play 2rp play 2rp 2play 4lp x2 4lp x2 2play 4rp s2 2play 4rp 2play 4lp x2 4lp
+                          2play 2rp 2play 2rp play 2lp 2rp 2play 2rp play 2lp 4lp play x2 play x2 play 2s2 (DD, 36)
+                    </pre>
+                </div>
+                <br/><br/>
+                <h3>Sound File</h3>
+                <br/>
+                <audio controls>
+                    <source src="../../assets/audio/final_srg2.mp3" type="audio/mp3" />
+                </audio>
+                <h3>Musical Notes</h3>
+                <div style="width: 35vw;">
+                    <strong>
+                            C1/2 C1/2 / G1/4 G1/4 / B1/4 B1/4 \ C1/4 C1/4 / E1/4 / G1/4 G1/4 \ E1/4 
+                            E1/4 / G1/4 / B1/4 B1/4 \ G1/4 G1/4 / B1/4 / D1/4 D1/4 \\ C1 C1 / G1/2 
+                            G1/2 / D1/2 D1/2 \\ C1 C1 / E1 E1 / G1 G1 G1 / B1 \ C1 C2 C4 
+                    </strong>
+                </div>
+                <br/><br/>
+            </div>
+        </div>
+        <div class="a2">
+                <u><h2>Part 3 - Minimalist Madness</h2></u>
+                <br/> 
+                <div class="indented">
+                    <h3>Composer's Notes</h3>
+                    <p> 
+                        The tune I chose to create is named <em>Amplitude</em>. The name was chosen as the 
+                        main theme of the piece is the constant change in amplitude between subsuquent notes.
+                        <em>Amplitude</em> is a minimal piece because it adheres to most of the minimal music 
+                        characteristics. It's limited in musical materials, as it is played on a single instrument.
+                        It has an experimental flavor, as it doesn't abide to any scale or taught recommendations.
+                        The approach to creating the piece focused on the fact that humans like predictability, and 
+                        what most would consider good music, would be predictable to a degree. The transformation is 
+                        gradual, rising one note per iteration. The subsequent not is based on additive/subtractive
+                        measure. And there is a strict rule as to how much you can rise and fall per given iteration.
+                        
+                        In making the piece, the hardest part was coming up with the idea of what to make.
+                        After coming up with it, it was a pretty simple implentation.
+                        Basically keep doubling the amount you lower the pitch by the initial factor you raised it by,
+                        and raise it at the end by the same initial amount to return to the starting note.
+                        Repeat that 10 times.
+                        Then to fill up the time and make the piece more interesting, follow the same note alteration
+                        process for the tempo, and voilà, you have <em>Alteration</em>.
+                    </p>
+                    <br/>
+                    <h3>MxM Code</h3>
+                    <pre style="width: 80%;">
+                        EIGTHH >> PLAY 7RP PLAY 14LP PLAY 7RP
+                        FIFTHH >> PLAY 4RP PLAY 8LP PLAY 4RP
+                        FINAL >> TUNE S2 TUNE 2X2 TUNE 3S2 TUNE 2X2
+                        FIRST >> PLAY
+                        FRTH >> PLAY 3RP PLAY 6LP PLAY 3RP
+                        NINTHH >> PLAY 8RP PLAY 16LP PLAY 8RP
+                        SCOND >> PLAY RP PLAY 2LP PLAY RP
+                        SEVENTHH >> PLAY 5RP PLAY 10LP PLAY 5RP
+                        SIXTHH >> PLAY 5RP PLAY 10LP PLAY 5RP
+                        TENTHH >> PLAY 9RP PLAY 18LP PLAY 9RP
+                        THRD >> PLAY 2RP PLAY 4LP PLAY 2RP
+                        TUNE >> FIRST SCOND THRD FRTH FIFTHH SIXTHH SEVENTHH EIGTHH NINTHH TENTHH                      
+                    </pre>
+                    <br/>
+                    <img src="../../assets/img/minimal.png" alt="graphic rendering of amplitude">
+                    <h4>Amplitude</h4>
+                    <audio controls>
+                        <source src="../../assets/audio/final_minimal.mp3" type="audio/mp3" />
+                    </audio>
+                    <p style="width: 35vw;">
+                        <strong>
+                            C1 C1 / D1 \ B1 / C1 / E1 \ A1 / C1 / F1 \ G1 / C1 / G1 \\ F1 / 
+                            C1 / A1 \\ E1 / C1 / A1 \\ E1 / C1 / C1 \\ C1 / C1 // D1 \\\ B1
+                            // C1 // E1 \\\ A1 // C1/2 C1/2 / D1/2 \ B1/2 / C1/2 / E1/2 \ 
+                            A1/2 / C1/2 / F1/2 \ G1/2 / C1/2 / G1/2 \\ F1/2 / C1/2 / A1/2 
+                            \\ E1/2 / C1/2 / A1/2 \\ E1/2 / C1/2 / C1/2 \\ C1/2 / C1/2 // 
+                            D1/2 \\\ B1/2 // C1/2 // E1/2 \\\ A1/2 // C2 C2 / D2 \ B2 / C2 
+                            / E2 \ A2 / C2 / F2 \ G2 / C2 / G2 \\ F2 / C2 / A2 \\ E2 / C2 
+                            / A2 \\ E2 / C2 / C2 \\ C2 / C2 // D2 \\\ B2 // C2 // E2 \\\ 
+                            A2 // C1/4 C1/4 / D1/4 \ B1/4 / C1/4 / E1/4 \ A1/4 / C1/4 / 
+                            F1/4 \ G1/4 / C1/4 / G1/4 \\ F1/4 / C1/4 / A1/4 \\ E1/4 / C1/4 
+                            / A1/4 \\ E1/4 / C1/4 / C1/4 \\ C1/4 / C1/4 // D1/4 \\\ B1/4 
+                            // C1/4 // E1/4 \\\ A1/4   
+                        </strong>
+                    </p>                
+                    <br/>
+                    <br/>
+                </div>
+            </div>
+            <div class="a2">
+                <u><h2>Part 4 - Fractured Familiar Tune</h2></u>
+                <br/> 
+                <div class="indented">
+                    <h3>Composer's Notes</h3>
+                    <p> 
+                        For this portion of the assignment, I selected to modify Bach's <em>Invention 13</em>.
+                        I selected this tune as it was the only famous tune I found with a partially JFugue
+                        MusicString scribed online, as i do not now how to read sheet music. The source can be found
+                        <a href="http://www.oracle.com/technetwork/systems/ts-5263-159137.pdf">here</a>. 
+
+                        The original piece, uses sixteenth and eighth notes, for the part I chose to alter.
+                        This was a problem, as MxM has issues with producing notes of that duration. Therefore,
+                        the first modification made was slowing the tune down by a factor of 4. After that, I produced
+                        a variation of the tune, one octave lower. Finally, the final version of the tune is the two
+                        aformentioned tunes played in organum.
+                    </p>
+                    <br/>
+                    <h3>MxM Code</h3>
+                    <pre style="width: 80%;">
+                        INVENTION13 >> 2S2 2RP PLAY 4LP PLAY 9RP PLAY 8LP PLAY 3LP PLAY 9RP PLAY 
+                        X2 LP PLAY 3RP PLAY 2RP PLAY 2LP PLAY S2 11LP PLAY 4RP PLAY 4LP PLAY 9RP 
+                        PLAY 8LP PLAY 3RP PLAY 3LP PLAY 9RP PLAY 2LP PLAY REST 2X2 4LP
+                        LOWEROCTAVE >> 7LP INVENTION13 7RP
+                        ORGANUM13 >> INVENTION13^LOWEROCTAVE
+                    </pre>
+                    <br/>
+                    <h4>Invention 13 (Slowed Down)</h4>
+                    <audio controls>
+                        <source src="../../assets/audio/final_invention13.mp3" type="audio/mp3" />
+                    </audio>
+                    <p style="width: 35vw;">
+                        <strong>
+                            C1 C1 / D1 \ B1 / C1 / E1 \ A1 / C1 / F1 \ G1 / C1 / G1 \\ F1 / 
+                            C1 / A1 \\ E1 / C1 / A1 \\ E1 / C1 / C1 \\ C1 / C1 // D1 \\\ B1
+                            // C1 // E1 \\\ A1 // C1/2 C1/2 / D1/2 \ B1/2 / C1/2 / E1/2 \ 
+                            A1/2 / C1/2 / F1/2 \ G1/2 / C1/2 / G1/2 \\ F1/2 / C1/2 / A1/2 
+                            \\ E1/2 / C1/2 / A1/2 \\ E1/2 / C1/2 / C1/2 \\ C1/2 / C1/2 // 
+                            D1/2 \\\ B1/2 // C1/2 // E1/2 \\\ A1/2 // C2 C2 / D2 \ B2 / C2 
+                            / E2 \ A2 / C2 / F2 \ G2 / C2 / G2 \\ F2 / C2 / A2 \\ E2 / C2 
+                            / A2 \\ E2 / C2 / C2 \\ C2 / C2 // D2 \\\ B2 // C2 // E2 \\\ 
+                            A2 // C1/4 C1/4 / D1/4 \ B1/4 / C1/4 / E1/4 \ A1/4 / C1/4 / 
+                            F1/4 \ G1/4 / C1/4 / G1/4 \\ F1/4 / C1/4 / A1/4 \\ E1/4 / C1/4 
+                            / A1/4 \\ E1/4 / C1/4 / C1/4 \\ C1/4 / C1/4 // D1/4 \\\ B1/4 
+                            // C1/4 // E1/4 \\\ A1/4   
+                        </strong>
+                    </p>                
+                    <br/>
+                    <br/>
+                    <h4>Lower Octave</h4>
+                    <audio controls>
+                        <source src="../../assets/audio/final_lower13.mp3" type="audio/mp3" />
+                    </audio>
+                    <p style="width: 35vw;">
+                        <strong>
+                            \\ E1/4 \ A1/4 // C1/4 \\ B1/4 \ F1/4 // A1/4 \ G1/2 / C1/2 / E1/2 \ C1/2 
+                            \\ F1/4 / C1/4 \ F1/4 // A1/4 \\ G1/4 / C1/4 \ G1/4 // B1/4 \ G1/4 R1/4 
+                        </strong>
+                    </p>                
+                    <br/>
+                    <br/>
+                    <h4>After Invention 13</h4>
+                    <audio controls>
+                        <source src="../../assets/audio/final_after13.mp3" type="audio/mp3" />
+                    </audio>
+                    <div style="width: 35vw;">
+                        <strong>
+                            C1 C1 / D1 \ B1 / C1 / E1 \ A1 / C1 / F1 \ G1 / C1 / G1 \\ F1 / 
+                            C1 / A1 \\ E1 / C1 / A1 \\ E1 / C1 / C1 \\ C1 / C1 // D1 \\\ B1
+                            // C1 // E1 \\\ A1 // C1/2 C1/2 / D1/2 \ B1/2 / C1/2 / E1/2 \ 
+                            A1/2 / C1/2 / F1/2 \ G1/2 / C1/2 / G1/2 \\ F1/2 / C1/2 / A1/2 
+                            \\ E1/2 / C1/2 / A1/2 \\ E1/2 / C1/2 / C1/2 \\ C1/2 / C1/2 // 
+                            D1/2 \\\ B1/2 // C1/2 // E1/2 \\\ A1/2 // C2 C2 / D2 \ B2 / C2 
+                            / E2 \ A2 / C2 / F2 \ G2 / C2 / G2 \\ F2 / C2 / A2 \\ E2 / C2 
+                            / A2 \\ E2 / C2 / C2 \\ C2 / C2 // D2 \\\ B2 // C2 // E2 \\\ 
+                            A2 // C1/4 C1/4 / D1/4 \ B1/4 / C1/4 / E1/4 \ A1/4 / C1/4 / 
+                            F1/4 \ G1/4 / C1/4 / G1/4 \\ F1/4 / C1/4 / A1/4 \\ E1/4 / C1/4 
+                            / A1/4 \\ E1/4 / C1/4 / C1/4 \\ C1/4 / C1/4 // D1/4 \\\ B1/4 
+                            // C1/4 // E1/4 \\\ A1/4   
+                        </strong>
+                        <hr/>
+                        <strong>
+                            \\ E1/4 \ A1/4 // C1/4 \\ B1/4 \ F1/4 // A1/4 \ G1/2 / C1/2 / E1/2 \ C1/2 
+                            \\ F1/4 / C1/4 \ F1/4 // A1/4 \\ G1/4 / C1/4 \ G1/4 // B1/4 \ G1/4 R1/4 
+                        </strong>
+                    </div>                
+                    <br/>
+                    <br/>
+                </div>
+            </div>
+    </main>   
+</body>
+</html>
